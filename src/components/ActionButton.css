@@ -1,0 +1,31 @@
+.action-button {
+  background-color: #0052FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  height: 40px; /* Increased from 32px to match other buttons */
+  box-sizing: border-box;
+}
+
+.action-button:hover {
+  background-color: #0045d8;
+}
+
+.action-button .btn-icon {
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+}
+
+.action-button:hover .btn-icon {
+  transform: translateX(4px);
+}

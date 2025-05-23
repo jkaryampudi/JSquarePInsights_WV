@@ -1,0 +1,397 @@
+.property-card, .suburb-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: visible; /* Changed from hidden to visible to prevent truncation */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 540px; /* Further increased height to ensure buttons are fully visible */
+}
+
+.property-card:hover, .suburb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.property-image, .suburb-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.property-image img, .suburb-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #0052FF;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.property-type-badge, .suburb-type-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #0052FF;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.property-price {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #14213D;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.property-content, .suburb-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.property-title, .suburb-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  color: #14213D;
+}
+
+.property-address, .suburb-location {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.address-icon {
+  margin-right: 5px;
+  color: #0052FF;
+}
+
+.property-specs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spec-icon {
+  color: #0052FF;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.spec-value {
+  font-weight: 700;
+  color: #333;
+  font-size: 16px;
+}
+
+.spec-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.property-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.metric-item {
+  text-align: center;
+  flex: 1;
+}
+
+.metric-value {
+  font-weight: 700;
+  color: #0052FF;
+  font-size: 16px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.agent-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.agent-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.listing-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.view-details-btn, .view-profile-btn {
+  background-color: #0052FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.view-details-btn:hover, .view-profile-btn:hover {
+  background-color: #0045d8;
+}
+
+/* Price section for suburb cards */
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.price-column {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f0f7ff;
+}
+
+.price-icon {
+  margin-right: 10px;
+  color: #0052FF;
+  background-color: #e6f0ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0052FF;
+}
+
+/* Yield section for suburb cards */
+.yield-section {
+  margin-bottom: 15px;
+}
+
+.yield-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.yield-icon {
+  margin-right: 10px;
+  color: #FFC107;
+  background-color: #fff8e6;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yield-label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.yield-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.trend-indicator {
+  margin-left: 5px;
+}
+
+.trend-indicator.up {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #4CAF50;
+}
+
+/* Highlight items for suburb cards */
+.highlight-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.highlight-icon {
+  color: #0052FF;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: rgba(0, 82, 255, 0.1);
+  border-radius: 50%;
+  padding: 3px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Scroll arrow styles */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  background-color: #0052FF;
+  color: white;
+}
+
+.scroll-arrow.left {
+  left: 10px;
+}
+
+.scroll-arrow.right {
+  right: 10px;
+}
+
+.scroll-arrow-icon {
+  font-size: 20px;
+}
+
+.card-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .property-card, .suburb-card {
+    height: 510px;
+  }
+  
+  .property-image, .suburb-image {
+    height: 180px;
+  }
+  
+  .property-title, .suburb-title {
+    font-size: 18px;
+  }
+  
+  .property-address, .suburb-location {
+    font-size: 13px;
+  }
+  
+  .spec-value, .price-value, .yield-value {
+    font-size: 14px;
+  }
+  
+  .highlight-text {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .property-card, .suburb-card {
+    height: 525px;
+  }
+}
